@@ -1,0 +1,213 @@
+{
+  "products": [
+    {
+      "id": "lays",
+      "name": "Lay's Magic Masala",
+      "image_url": "/uploads/lays.jpg",
+      "verified_fields": {
+        "product_name": "Lay's Magic Masala Potato Chips",
+        "net_quantity": "52g",
+        "mrp_display": "₹20.00",
+        "manufacturer": "PepsiCo India Holdings Pvt. Ltd., Gurugram, Haryana - 122101",
+        "consumer_care_phone": "1800 22 4020",
+        "consumer_care_email": "consumer.feedback@pepsico.com",
+        "country_of_origin": "India",
+        "mfg_date": "Printed on package (coding area)",
+        "best_before": "6 months from manufacture",
+        "fssai_lic_no": "10014064000435"
+      },
+      "expected_verdict": "COMPLIANT",
+      "score": 100,
+      "checks": [
+        { "id": "mrp", "label": "MRP Declaration", "status": "PASS", "detail": "MRP ₹20.00 present, inclusive of all taxes" },
+        { "id": "net_qty", "label": "Net Quantity", "status": "PASS", "detail": "52g declared in standard unit" },
+        { "id": "manufacturer", "label": "Manufacturer Address", "status": "PASS", "detail": "Full address with PIN Code present" },
+        { "id": "consumer_care", "label": "Consumer Care Details", "status": "PASS", "detail": "Phone and email provided" },
+        { "id": "mfg_date", "label": "Manufacturing Date", "status": "PASS", "detail": "Declared in coding area" },
+        { "id": "best_before", "label": "Best Before / Expiry", "status": "PASS", "detail": "6 months from manufacture declared" },
+        { "id": "origin", "label": "Country of Origin", "status": "PASS", "detail": "India" },
+        { "id": "expiry_check", "label": "Expiry Validation", "status": "PASS", "detail": "Product is within shelf life" }
+      ],
+      "violations": [],
+      "notes": "All mandatory Legal Metrology declarations are present and clearly legible."
+    },
+    {
+      "id": "almonds",
+      "name": "Smoked Almonds (Deli Nut)",
+      "image_url": "/uploads/almonds.jpg",
+      "verified_fields": {
+        "product_name": "Smoked Almonds",
+        "net_quantity": "50g",
+        "mrp_display": "₹250.00",
+        "mfg_date": "13/05/2023",
+        "exp_date": "12/06/2024",
+        "manufacturer": "India Food Exports, Door No. 38C, Irulappapuram, Nagercoil, K K District, Tamil Nadu",
+        "marketer": "InterGlobe Aviation Ltd. (IndiGo), Janpath, New Delhi - 110001",
+        "consumer_care_phone": "+91 4742742854",
+        "consumer_care_email": "mail@indiafoodexports.com",
+        "country_of_origin": "India"
+      },
+      "expected_verdict": "NON-COMPLIANT",
+      "score": 40,
+      "checks": [
+        { "id": "mrp", "label": "MRP Declaration", "status": "PASS", "detail": "₹250.00 present" },
+        { "id": "net_qty", "label": "Net Quantity", "status": "PASS", "detail": "50g declared" },
+        { "id": "manufacturer", "label": "Manufacturer Address", "status": "FAIL", "detail": "PIN Code missing — address stops at 'Tamil Nadu'" },
+        { "id": "consumer_care", "label": "Consumer Care Details", "status": "PASS", "detail": "Phone and email provided" },
+        { "id": "mfg_date", "label": "Manufacturing Date", "status": "PASS", "detail": "13/05/2023 declared" },
+        { "id": "expiry_check", "label": "Expiry Validation", "status": "FAIL", "detail": "EXPIRED on 12/06/2024 — cannot be sold" },
+        { "id": "origin", "label": "Country of Origin", "status": "PASS", "detail": "India" }
+      ],
+      "violations": [
+        {
+          "field": "expiry_date",
+          "reason": "PRODUCT EXPIRED. Expiry date was 12/06/2024. Expired products cannot be sold per FSSAI regulations.",
+          "citation": "FSSAI (Labelling and Display) Regulations, 2020 — Rule 6",
+          "severity": "critical"
+        },
+        {
+          "field": "manufacturer_address",
+          "reason": "Manufacturer address is incomplete — PIN Code is missing. Legal Metrology Rules require full address including PIN code for traceability.",
+          "citation": "Rule 6(1)(a), Legal Metrology (Packaged Commodities) Rules, 2011",
+          "severity": "high"
+        }
+      ],
+      "notes": "Two violations found: (1) Product is EXPIRED, (2) Manufacturer address lacks PIN Code."
+    },
+    {
+      "id": "lux_soap",
+      "name": "Lux Soap",
+      "image_url": "/uploads/lux_soap.jpg",
+      "verified_fields": {
+        "product_name": "Lux Bathing Bar",
+        "net_quantity": "100g",
+        "mrp_display": "₹130.00",
+        "mfg_date": "23/07/2026",
+        "exp_date": "18/01/2029",
+        "manufacturer": "Hindustan Unilever Ltd., Off NH-45A, Vadamamangalam, Puducherry - 605102",
+        "marketer": "Hindustan Unilever Limited (HUL)",
+        "consumer_care_phone": "1800-10-22-221",
+        "consumer_care_email": "lever.care@unilever.com",
+        "country_of_origin": "India"
+      },
+      "expected_verdict": "NEEDS REVIEW",
+      "score": 70,
+      "checks": [
+        { "id": "mrp", "label": "MRP Declaration", "status": "REVIEW", "detail": "On black coding area — OCR cannot read. Manual check needed." },
+        { "id": "net_qty", "label": "Net Quantity", "status": "PASS", "detail": "100g declared" },
+        { "id": "manufacturer", "label": "Manufacturer Address", "status": "PASS", "detail": "Complete with PIN Code" },
+        { "id": "consumer_care", "label": "Consumer Care Details", "status": "PASS", "detail": "Phone and email provided" },
+        { "id": "mfg_date", "label": "Manufacturing Date", "status": "REVIEW", "detail": "On black coding area — manual check needed" },
+        { "id": "expiry_check", "label": "Expiry Validation", "status": "REVIEW", "detail": "On black coding area — manual check needed" },
+        { "id": "origin", "label": "Country of Origin", "status": "PASS", "detail": "India" }
+      ],
+      "violations": [],
+      "notes": "MRP, Mfg Date, and Expiry are printed on the black coding area (white text on black). OCR cannot read these automatically. Manual verification required."
+    },
+    {
+      "id": "cura",
+      "name": "Cura Aamla No.1 Ras",
+      "image_url": "/uploads/cura.jpg",
+      "verified_fields": {
+        "product_name": "Cura Aamla No.1 Ras",
+        "net_quantity": "1000ml",
+        "mrp_display": "₹210.00",
+        "mfg_date": "06/10/2025",
+        "exp_date": "24 months from Mfg",
+        "manufacturer": "Cura Ayurvedic & Unani Ltd., VL-5, Site-2, Industrial Area, Loni Road, Mohan Nagar, Ghaziabad, U.P. - 201007",
+        "consumer_care_phone": "1800-121-0067",
+        "consumer_care_email": "curapharmaceuticals@gmail.com",
+        "country_of_origin": "India",
+        "mfg_lic_no": "A-4574/2015"
+      },
+      "expected_verdict": "NON-COMPLIANT",
+      "score": 60,
+      "checks": [
+        { "id": "mrp", "label": "MRP Declaration", "status": "PASS", "detail": "₹210.00 present" },
+        { "id": "net_qty", "label": "Net Quantity", "status": "PASS", "detail": "1000ml declared" },
+        { "id": "manufacturer", "label": "Manufacturer Address", "status": "FAIL", "detail": "Secondary unit address fragmented — missing clear district/PIN" },
+        { "id": "consumer_care", "label": "Consumer Care Details", "status": "PASS", "detail": "Phone and email provided" },
+        { "id": "mfg_date", "label": "Manufacturing Date", "status": "PASS", "detail": "06/10/2025 declared" },
+        { "id": "expiry_check", "label": "Expiry Validation", "status": "PASS", "detail": "Within shelf life" },
+        { "id": "origin", "label": "Country of Origin", "status": "PASS", "detail": "India" }
+      ],
+      "violations": [
+        {
+          "field": "manufacturer_address",
+          "reason": "Secondary manufacturing unit address is incomplete. 'Village, Katri Piper Kheda, Kallu Purwa, Unnao (U.P)-209861' is fragmented and lacks clear district name.",
+          "citation": "Rule 6(1)(a), Legal Metrology (Packaged Commodities) Rules, 2011",
+          "severity": "high"
+        }
+      ],
+      "notes": "Primary address is complete, but secondary unit is fragmented."
+    },
+    {
+      "id": "natures_essence",
+      "name": "Nature's Essence Lotion",
+      "image_url": "/uploads/natures_essence.jpg",
+      "verified_fields": {
+        "product_name": "Nature's Essence Nourishing Body Lotion",
+        "net_quantity": "400ml",
+        "mrp_display": "₹330.00",
+        "mfg_date": "07/2025",
+        "best_before": "36 months from date of manufacture",
+        "manufacturer": "Esme Consumer Pvt. Ltd., 8, IP-II, Salempur Mehdood, Haridwar - 249402, Uttarakhand, India",
+        "consumer_care_phone": "+91-9899809988",
+        "consumer_care_email": "contact@esmeconsumer.in",
+        "country_of_origin": "India",
+        "mfg_lic_no": "M-5/C/UA/2019"
+      },
+      "expected_verdict": "COMPLIANT",
+      "score": 100,
+      "checks": [
+        { "id": "mrp", "label": "MRP Declaration", "status": "PASS", "detail": "₹330.00 present" },
+        { "id": "net_qty", "label": "Net Quantity", "status": "PASS", "detail": "400ml declared" },
+        { "id": "manufacturer", "label": "Manufacturer Address", "status": "PASS", "detail": "Complete with PIN Code" },
+        { "id": "consumer_care", "label": "Consumer Care Details", "status": "PASS", "detail": "Phone and email provided" },
+        { "id": "mfg_date", "label": "Manufacturing Date", "status": "PASS", "detail": "07/2025 declared" },
+        { "id": "best_before", "label": "Best Before", "status": "PASS", "detail": "36 months from Mfg declared" },
+        { "id": "origin", "label": "Country of Origin", "status": "PASS", "detail": "India" }
+      ],
+      "violations": [],
+      "notes": "All mandatory declarations present with complete address and PIN code."
+    },
+    {
+      "id": "dr_sheths",
+      "name": "Dr. Sheth's Serum",
+      "image_url": "/uploads/dr_sheths.jpg",
+      "verified_fields": {
+        "product_name": "Dr. Sheth's Serum",
+        "net_quantity": "30ml",
+        "mrp_display": "₹499.00",
+        "mfg_date": "11/2025",
+        "best_before": "24 months from mfg date",
+        "manufacturer": "Alaina Healthcare Pvt. Ltd., Khasra No. 127-132, 707/133 & 685/608/32, Village Jharmaijri, Baddi, Distt. Solan, Himachal Pradesh",
+        "marketer": "Honasa Consumer Ltd., Capital Cyberscape, Sector 59, Gurugram, Haryana - 122101",
+        "consumer_care_phone": "+91 7977445667",
+        "consumer_care_email": "support@drsheths.com",
+        "country_of_origin": "India",
+        "mfg_lic_no": "HIM/COS/16/227"
+      },
+      "expected_verdict": "NON-COMPLIANT",
+      "score": 65,
+      "checks": [
+        { "id": "mrp", "label": "MRP Declaration", "status": "PASS", "detail": "₹499.00 present" },
+        { "id": "net_qty", "label": "Net Quantity", "status": "PASS", "detail": "30ml declared" },
+        { "id": "manufacturer", "label": "Manufacturer Address", "status": "FAIL", "detail": "PIN Code missing — address stops at 'Himachal Pradesh'" },
+        { "id": "consumer_care", "label": "Consumer Care Details", "status": "PASS", "detail": "Phone and email provided" },
+        { "id": "mfg_date", "label": "Manufacturing Date", "status": "PASS", "detail": "11/2025 declared" },
+        { "id": "expiry_check", "label": "Expiry Validation", "status": "PASS", "detail": "Within shelf life" },
+        { "id": "origin", "label": "Country of Origin", "status": "PASS", "detail": "India" }
+      ],
+      "violations": [
+        {
+          "field": "manufacturer_address",
+          "reason": "Manufacturer address is incomplete — PIN Code is missing after 'Distt. Solan, Himachal Pradesh'. Legal Metrology requires full address with PIN Code.",
+          "citation": "Rule 6(1)(a), Legal Metrology (Packaged Commodities) Rules, 2011",
+          "severity": "high"
+        }
+      ],
+      "notes": "Address stops at State — no PIN Code. Violation under Rule 6(1)(a)."
+    }
+  ]
+}
