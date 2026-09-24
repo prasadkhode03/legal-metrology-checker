@@ -67,31 +67,6 @@ Our solution: An AI-powered screening tool that reads labels, extracts complianc
 
 ---
 
-## Architecture
-
-legal-metrology-checker/
-├── backend/
-│   ├── main.py                  # FastAPI application
-│   ├── ocr_service.py           # EasyOCR wrapper
-│   ├── field_extractor.py       # Regex + fuzzy field extraction
-│   ├── rule_engine.py           # Compliance rule evaluator
-│   ├── demo_data.json           # Verified compliance data for 6 products
-│   ├── requirements.txt
-│   ├── uploads/                 # Uploaded images
-│   └── venv/
-│
-├── frontend/
-│   ├── public/
-│   │   └── index.html
-│   ├── src/
-│   │   ├── App.jsx              # Main React component
-│   │   ├── App.css              # Styles
-│   │   └── index.js
-│   ├── package.json
-│   └── node_modules/
-│
-└── README.md
-
 ## Getting Started
 
 ### Prerequisites
